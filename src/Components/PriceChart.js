@@ -4,7 +4,7 @@ import { VictoryLine } from "victory";
 
 const PriceChart = (prices) => {
 
-  
+
 
 
   return(
@@ -12,7 +12,7 @@ const PriceChart = (prices) => {
       <h3 className="price-chart_header">Price Chart</h3>
       <VictoryLine className="price-chart"
     style={{
-      data: { stroke: "#c43a31" },
+      data: { stroke: "#c43a31", strokeWidth: 10 },
       parent: { border: "none"},
     }}
     data={[

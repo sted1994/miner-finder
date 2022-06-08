@@ -1,4 +1,6 @@
 select{
+  border-radius: 8px;
+  height: 10%;
   margin-top: -20px;
   width:90%;
 }
