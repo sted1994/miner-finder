@@ -4,7 +4,9 @@ import '../CSS/PriceChart.css'
 const PriceChart = () => {
 
   return(
-    <p>priceChart</p>
+    <div className="information-container">
+      <p>priceChart</p>
+    </div>
   )
 }
 

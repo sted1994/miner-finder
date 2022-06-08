@@ -4,7 +4,9 @@ import '../CSS/Stats.css'
 const Stats = () => {
 
   return(
-    <p>stats</p>
+    <div className="information-container">
+      <p>Stats</p>
+    </div>
   )
 }
 

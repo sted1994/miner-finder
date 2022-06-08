@@ -1,0 +1,26 @@
+.search-container{
+  align-items: center;
+  background-color: rgba( 1, 1, 1, 1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 60vw;
+  height: 40vh;
+}
+
+.search-input{
+  border-radius: 15px;
+  font-size: 15pt;
+  height: 2rem;
+  width: 50%;
+}
+
+.miner-search-btn{
+  background-color: lime;
+  border-radius: 8px;
+  font-size: 15pt;
+  height: 2rem;
+  margin-top: 1rem;
+  width: 15%;
+}

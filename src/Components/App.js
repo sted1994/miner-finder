@@ -39,7 +39,6 @@ class App extends Component {
           <Stats />
         </section>
         <MinerSearch />
-        <MinerSummary />
         </header>
       </div>
     );
