@@ -1,5 +1,11 @@
+h3{
+    margin-top: .5rem;
+    text-decoration: underline;
+}
+
 .information-container{
   border-radius: 8px;
+  color: lime;
   display: flex;
   flex-direction: column;
   align-items: center;

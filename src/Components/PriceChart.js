@@ -5,7 +5,7 @@ const PriceChart = () => {
 
   return(
     <div className="information-container">
-      <p>priceChart</p>
+      <h3>Price Chart</h3>
     </div>
   )
 }
