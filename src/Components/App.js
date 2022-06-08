@@ -33,9 +33,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <Banner />
-        <MarketPrice />
-        <PriceChart />
-        <Stats />
+        <section className="information-bar">
+          <MarketPrice />
+          <PriceChart />
+          <Stats />
+        </section>
         <MinerSearch />
         <MinerSummary />
         </header>
