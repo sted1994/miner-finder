@@ -1,6 +1,9 @@
 .App {
+  background-color: blue;
+  background-size: cover;
+  min-height: 100vh;
   text-align: center;
-  background-color: #0ACF83;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -15,14 +18,15 @@
 }
 
 .App-header {
-  background-color: #0ACF83;
-  min-height: 100vh;
+  background: url('../images/minerFinder-background.png');
+  background-size: cover;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  opacity: .7;
 }
 
 .App-link {
