@@ -1,0 +1,16 @@
+select{
+  border-radius: 8px;
+  height: 10%;
+  margin-top: -20px;
+  width:90%;
+}
+
+.stat-to-show{
+  margin-top: 1rem;
+  color: lime;
+}
+
+.data-to-show{
+  margin-top: 0;
+  color: lime;
+}

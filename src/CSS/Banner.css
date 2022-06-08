@@ -1,0 +1,21 @@
+.banner{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+  place-content: top;
+  width: 100%;
+}
+.logo{
+  border-radius: 100%;
+  width: 12vw;
+  box-shadow:  0px 0px 20px 11px #ccc;
+}
+
+.logo:hover{
+  box-shadow:  0px 0px 20px 12px lime;
+}
+
+.logo:active{
+  box-shadow:  0px 0px 0px 0px;
+}

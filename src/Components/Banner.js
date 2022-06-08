@@ -3,7 +3,9 @@ import '../CSS/Banner.css'
 
 const Banner = () => {
   return (
-    <p>banner</p>
+    <section className="banner">
+      <img className="logo" src={require('../images/minerFinder-logo.png')}/>
+    </section>
   )
 }
 
