@@ -14,18 +14,14 @@ class App extends Component {
 
     this.state = {
       marketValue: 0,
-      stats: {
-              tokenSupply: 0,
-              hotSpotsOnline: 0,
-              totalHotSpots: 0,
-              countries: 0,
-              cities: 0
-             }
+      oraclePrices: []
     }
   }
 
   componentDidMount = () => {
-    apiCalls.getRewards()
+    Promise.all([apiCalls.getOraclePrice()])
+    .then(res => this.setState({oraclePrices: res[0]}))
+
   }
 
   render () {
@@ -35,7 +31,7 @@ class App extends Component {
         <Banner />
         <section className="information-bar">
           <MarketPrice />
-          <PriceChart />
+          <PriceChart prices={this.state.oraclePrices}/>
           <Stats />
         </section>
         <MinerSearch />

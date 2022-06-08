@@ -4,7 +4,12 @@ const apiCalls = {
   },
 
   getOraclePrice(){
-    console.log('test')
+    return (
+      fetch('https://api.helium.io/v1/oracle/prices')
+      .then(res => res.json())
+      .then(data => data.data)
+      .catch(error => console.log(error))
+    )
   },
 
   getStats(){
