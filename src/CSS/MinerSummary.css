@@ -1,0 +1,29 @@
+.miner-summary{
+  background-color: rgba( 1, 1, 1, 1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 60vw;
+  height: 60vh;
+}
+
+.secondary-info{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.scale-reward{
+  margin-top: 0;
+  margin-right: 20px;
+}
+
+.location{
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.miner-name{
+  margin-bottom: 0;
+}
