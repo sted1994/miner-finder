@@ -56,7 +56,7 @@ class App extends Component {
         </section>
         <Switch>
           <Route exact path="/" render={() => <MinerSearch findMiner={this.findMiner}/> } />
-          <Route  path="/:id" render={({match}) => <MinerSummary match={match} updateRewards={this.updateRewards} minerRewards={this.state.minerRewards} minerSummary={this.state.minerSummary}/> } />
+          <Route  path="/:id" render={({match}) => <MinerSummary findMiner={this.findMiner} match={match} updateRewards={this.updateRewards} minerRewards={this.state.minerRewards} minerSummary={this.state.minerSummary}/> } />
         </Switch>
         </header>
       </div>

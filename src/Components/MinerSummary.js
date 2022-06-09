@@ -4,7 +4,7 @@ import { VictoryChart } from "victory";
 import { VictoryBar } from "victory";
 import { VictoryScatter } from "victory";
 
-const MinerSummary = ({minerSummary, minerRewards, match, updateRewards}) =>{
+const MinerSummary = ({minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
 
   if(!Array.isArray(minerSummary)){
     const name = minerSummary.name.split("-").join(" ")
@@ -27,8 +27,11 @@ const MinerSummary = ({minerSummary, minerRewards, match, updateRewards}) =>{
         </section>
       </section>
     )
+  } else{
+    const minerName = match.url.split(" ").join("-").slice(1)
+    findMiner(minerName)
+    console.log(minerName)
   }
-
 }
 
 export default MinerSummary;
