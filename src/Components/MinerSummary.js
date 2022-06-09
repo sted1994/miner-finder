@@ -4,7 +4,8 @@ import { VictoryChart } from "victory";
 import { VictoryBar } from "victory";
 import { VictoryScatter } from "victory";
 
-const MinerSummary = ({minerSummary}) =>{
+const MinerSummary = ({minerSummary, match}) =>{
+  
   if(!Array.isArray(minerSummary)){
     const name = minerSummary.name.split("-").join(" ")
     const scaleReward = minerSummary.reward_scale.toFixed(2)

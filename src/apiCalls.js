@@ -31,9 +31,11 @@ const apiCalls = {
     )
   },
 
-  getRewards(){
-    console.log('test')
-  },
+  getRewards(address){
+    return fetch(`https://cors-anywhere.herokuapp.com/https://api.helium.io/v1/hotspots/${address}/rewards/sum?min_time=-1%20day&max_time=0%20day`)
+            .then(res => res.json())
+            .then(data => data)
+      },
 
   getMinerDetails(input){
     let address = false

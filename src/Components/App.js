@@ -18,6 +18,8 @@ class App extends Component {
       oraclePrices: [],
       stats: {},
       minerSummary: [],
+      minerAddress: "",
+      minerRewards: 0,
     }
   }
 
@@ -27,9 +29,15 @@ class App extends Component {
   }
 
   findMiner = (input) => {
-    Promise.all([apiCalls.getMinerDetails(input)])
-    .then(res => this.setState({minerSummary: res[0]}))
-  }
+    return Promise.all([apiCalls.getMinerDetails(input)])
+      .then(res => {
+        this.setState({minerSummary: res[0], minerAddress: res[0].address})
+        return res[0].address
+        return res[0].address
+      }).then(test => apiCalls.getRewards(test))
+      .then(rewards => this.setState({minerRewards: rewards.data.total}))
+    }
+
 
   render () {
     return (
@@ -43,7 +51,7 @@ class App extends Component {
         </section>
         <Switch>
           <Route exact path="/" render={() => <MinerSearch findMiner={this.findMiner}/> } />
-          <Route exact path="/:searchParam" render={() => <MinerSummary minerSummary={this.state.minerSummary}/> } />
+          <Route  path="/:id" render={({match}) => <MinerSummary match={match} minerSummary={this.state.minerSummary}/> } />
         </Switch>
         </header>
       </div>
