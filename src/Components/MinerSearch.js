@@ -1,19 +1,22 @@
 import React, {Component} from 'react'
 import '../CSS/MinerSearch.css'
+import {apiCalls} from '../apiCalls'
+import {NavLink} from 'react-router-dom'
 
 class MinerSearch extends Component {
-  constructor(){
+  constructor(findMiner){
     super()
     this.state = {
       search:""
     }
   }
+
   render(){
     return(
       <section className="search-container">
         <h2>Find a Miner</h2>
         <input className="search-input" type='text' value={this.state.search} onChange={(event) => this.setState({search: event.target.value})} alt="Please enter a Miner name or address" placeholder="Please enter a Miner name or address 🔍"/>
-        <button className="miner-search-btn">Find Miners</button>
+        <NavLink className="miner-search-btn" to={this.state.search}><button onClick={() => this.props.findMiner(this.state.search)}>Find Miners</button></NavLink>
       </section>
     )
   }

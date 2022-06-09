@@ -34,6 +34,28 @@ const apiCalls = {
   getRewards(){
     console.log('test')
   },
+
+  getMinerDetails(input){
+    let address = false
+    input.split("").forEach(char => {
+      if(parseInt(char)){
+        address = true
+      }
+    })
+
+    if(address === false){
+      return fetch(`https://api.helium.io/v1/hotspots/name/${input.split(" ").join("-")}`)
+        .then(res => res.json())
+        .then(data => data.data[0])
+        .catch(error => console.log(error))
+    } else {
+      return fetch(`https://api.helium.io/v1/hotspots/${input}`)
+        .then(res => res.json())
+        .then(data => data.data)
+        .catch(error => console.log(error))
+    }
+  },
+
 }
 
 export {apiCalls}

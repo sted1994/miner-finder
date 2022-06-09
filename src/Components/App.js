@@ -6,6 +6,7 @@ import PriceChart from './PriceChart';
 import Stats from './Stats';
 import MinerSearch from './MinerSearch';
 import MinerSummary from './MinerSummary'
+import {Route, Switch} from 'react-router-dom'
 import {apiCalls} from '../apiCalls';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
       marketValue: 0,
       oraclePrices: [],
       stats: {},
+      minerSummary: [],
     }
   }
 
@@ -23,7 +25,12 @@ class App extends Component {
     Promise.all([apiCalls.getOraclePrice()])
     .then(res => this.setState({oraclePrices: res[0]}))
   }
-//  <MinerSearch />
+
+  findMiner = (input) => {
+    Promise.all([apiCalls.getMinerDetails(input)])
+    .then(res => this.setState({minerSummary: res[0]}))
+  }
+
   render () {
     return (
       <div className="App">
@@ -34,8 +41,10 @@ class App extends Component {
           <PriceChart prices={this.state.oraclePrices}/>
           <Stats />
         </section>
-
-        <MinerSummary />
+        <Switch>
+          <Route exact path="/" render={() => <MinerSearch findMiner={this.findMiner}/> } />
+          <Route exact path="/:searchParam" render={() => <MinerSummary minerSummary={this.state.minerSummary}/> } />
+        </Switch>
         </header>
       </div>
     );
