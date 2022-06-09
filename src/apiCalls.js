@@ -5,7 +5,7 @@ const apiCalls = {
     headers: {'X-CMC_PRO_API_KEY': "614e8f0b-33df-4896-a10b-759472089473", "Accept": "*/*"},
     redirect: 'follow'
   };
-//https://cors-anywhere.herokuapp.com/
+// Helium cpi key uExLTAP2hb5pT3sieItstQMwggZKSj5t3qN3MPR672c
   return fetch('https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?slug=helium' + requestOptions)
     .then(response => response.text())
     .then(result => JSON.parse(result))
