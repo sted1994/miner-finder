@@ -23,7 +23,7 @@ class App extends Component {
     Promise.all([apiCalls.getOraclePrice()])
     .then(res => this.setState({oraclePrices: res[0]}))
   }
-
+//  <MinerSearch />
   render () {
     return (
       <div className="App">
@@ -34,7 +34,8 @@ class App extends Component {
           <PriceChart prices={this.state.oraclePrices}/>
           <Stats />
         </section>
-        <MinerSearch />
+
+        <MinerSummary />
         </header>
       </div>
     );
