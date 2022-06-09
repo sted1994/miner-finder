@@ -1,11 +1,11 @@
 import React from 'react';
 import '../CSS/MarketPrice.css'
 
-const MarketPrice = () => {
+const MarketPrice = ({price}) => {
   return(
     <section className="information-container">
       <h3>Market Price</h3>
-      <p>$10.86</p>
+      <p className="market-price">${price}</p>
     </section>
   )
 

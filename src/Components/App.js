@@ -14,14 +14,14 @@ class App extends Component {
 
     this.state = {
       marketValue: 0,
-      oraclePrices: []
+      oraclePrices: [],
+      stats: {},
     }
   }
 
   componentDidMount = () => {
     Promise.all([apiCalls.getOraclePrice()])
     .then(res => this.setState({oraclePrices: res[0]}))
-
   }
 
   render () {
@@ -30,7 +30,7 @@ class App extends Component {
         <header className="App-header">
         <Banner />
         <section className="information-bar">
-          <MarketPrice />
+          <MarketPrice price={this.state.marketValue}/>
           <PriceChart prices={this.state.oraclePrices}/>
           <Stats />
         </section>

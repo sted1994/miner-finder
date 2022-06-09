@@ -12,5 +12,6 @@ select{
 
 .data-to-show{
   margin-top: 0;
-  color: lime;
+  color: white;
+  opacity: 1;
 }
