@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../CSS/MinerSummary.css'
-import { VictoryChart } from "victory";
-import { VictoryBar } from "victory";
-import { VictoryScatter } from "victory";
 
 const MinerSummary = ({minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
 
   if(!Array.isArray(minerSummary)){
     const name = minerSummary.name.split("-").join(" ")
     const scaleReward = minerSummary.reward_scale.toFixed(2)
+    const findStatus = () =>{
+      return minerSummary.status.online=== "online" ? <article>🟢 Online</article> : <article>🔴 Offline</article>
+    }
     return(
       <section className="miner-summary">
         <section className="status">
-          {minerSummary.status.online=== "online" ? <article>🟢 Online</article> : <article>🔴 Offline</article>}
+          {findStatus()}
         </section>
         <h2 className="miner-name">{name}</h2>
         <section className="secondary-info">
