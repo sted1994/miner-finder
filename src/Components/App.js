@@ -33,9 +33,14 @@ class App extends Component {
       .then(res => {
         this.setState({minerSummary: res[0], minerAddress: res[0].address})
         return res[0].address
-        return res[0].address
-      }).then(test => apiCalls.getRewards(test))
+      }).then(address => apiCalls.getRewards(address, "min_time=-1%20day&max_time=0%20day"))
       .then(rewards => this.setState({minerRewards: rewards.data.total}))
+    }
+
+    updateRewards = (timeFrame) => {
+      return timeFrame === 7 ? apiCalls.getRewards(this.state.minerAddress, "min_time=-7%20day&max_time=0%20day").then(res => this.setState({minerRewards: res.data.total})) :
+       timeFrame === 14 ? apiCalls.getRewards(this.state.minerAddress, "min_time=-13%20day&max_time=-1%20day").then(res => this.setState({minerRewards: res.data.total})) :
+       apiCalls.getRewards(this.state.minerAddress, "min_time=-30%20day&max_time=-1%20day").then(res => this.setState({minerRewards: res.data.total}))
     }
 
 
@@ -51,7 +56,7 @@ class App extends Component {
         </section>
         <Switch>
           <Route exact path="/" render={() => <MinerSearch findMiner={this.findMiner}/> } />
-          <Route  path="/:id" render={({match}) => <MinerSummary match={match} minerSummary={this.state.minerSummary}/> } />
+          <Route  path="/:id" render={({match}) => <MinerSummary match={match} updateRewards={this.updateRewards} minerRewards={this.state.minerRewards} minerSummary={this.state.minerSummary}/> } />
         </Switch>
         </header>
       </div>

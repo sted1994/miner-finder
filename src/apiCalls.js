@@ -1,17 +1,16 @@
 const apiCalls = {
   getMarketPrice(){
-  // var requestOptions = {
-  //   method: 'GET',
-  //   headers: {'X-CMC_PRO_API_KEY': "614e8f0b-33df-4896-a10b-759472089473", "Accept": "*/*"},
-  //   redirect: 'follow'
-  // };
-  //
-  // fetch("https://localhost:3001/marketValue")
-  //   .then(response => response.text())
-  //   .then(result => JSON.parse(result))
-  //   .then(data => data.data[5665].quote.USD.price)
-  //   .catch(error => console.log('error', error));
-  console.log('test')
+  var requestOptions = {
+    method: 'GET',
+    headers: {'X-CMC_PRO_API_KEY': "614e8f0b-33df-4896-a10b-759472089473", "Accept": "*/*"},
+    redirect: 'follow'
+  };
+//https://cors-anywhere.herokuapp.com/
+  return fetch('https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?slug=helium' + requestOptions)
+    .then(response => response.text())
+    .then(result => JSON.parse(result))
+    .then(data => data.data[5665].quote.USD.price)
+    .catch(error => console.log('error', error));
   },
   getOraclePrice(){
     return (
@@ -31,8 +30,8 @@ const apiCalls = {
     )
   },
 
-  getRewards(address){
-    return fetch(`https://cors-anywhere.herokuapp.com/https://api.helium.io/v1/hotspots/${address}/rewards/sum?min_time=-1%20day&max_time=0%20day`)
+  getRewards(address, timeFrame){
+    return fetch(`https://cors-anywhere.herokuapp.com/https://api.helium.io/v1/hotspots/${address}/rewards/sum?${timeFrame}`)
             .then(res => res.json())
             .then(data => data)
       },
