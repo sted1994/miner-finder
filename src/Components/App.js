@@ -61,7 +61,6 @@ class App extends Component {
         <header className="App-header">
         <Banner />
         <section className="information-bar">
-          <MarketPrice price={this.state.marketValue}/>
           <PriceChart prices={this.state.oraclePrices}/>
           <Stats />
         </section>

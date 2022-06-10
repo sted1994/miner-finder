@@ -1,16 +1,18 @@
 const apiCalls = {
-  getMarketPrice(){
-  var requestOptions = {
-    method: 'GET',
-    headers: {'X-CMC_PRO_API_KEY': "614e8f0b-33df-4896-a10b-759472089473", "Accept": "*/*"},
-    redirect: 'follow'
-  };
-  return fetch('https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?slug=helium' + requestOptions)
-    .then(response => response.text())
-    .then(result => JSON.parse(result))
-    .then(data => data.data[5665].quote.USD.price)
-    .catch(error => console.log('error', error));
-  },
+  // getMarketPrice(){
+  // var requestOptions = {
+  //   method: 'GET',
+  //   headers: {'X-CMC_PRO_API_KEY': "614e8f0b-33df-4896-a10b-759472089473", "Accept": "*"},
+  //   redirect: 'follow'
+  // };
+  // //data.data[5665].quote.USD.price
+  // return fetch('https://localhost:3001')
+  //   .then(response => response.text())
+  //   .then(data => console.log(data))
+  //   // .then(result => JSON.parse(result))
+  //   // .then(data => console.log(data))
+  //   .catch(error => console.log('Error: ', error));
+  // },
   getOraclePrice(){
     return (
       fetch('https://api.helium.io/v1/oracle/prices')
