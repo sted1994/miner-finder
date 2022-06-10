@@ -12,7 +12,6 @@ const setChartPoints = () => {
 }
 
   const checkFetch = () => {
-    console.log(prices)
     if(!prices || !prices.length){
       return( <div className="information-container">
                 <h3 className="price-chart_header">Oracle Price</h3>

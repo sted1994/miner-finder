@@ -28,7 +28,7 @@ describe("Stat container", () => {
     cy.get(".data-to-show").should("have.text", "458687179")
   });
 
-  it("should show an error msg if stats can not be fetched", () => {
+  it("Should show an error msg if stats can not be fetched", () => {
     cy.intercept("GET", "https://api.helium.io/v1/stats", {
         statusCode: 500,
         body: {
@@ -38,7 +38,7 @@ describe("Stat container", () => {
       cy.get(".information-container").should("contain", "Oh No").should("contain", "an error occured during loading try again")
   });
 
-  it("should have no options to pick if server error occurs", () => {
+  it("Should have no options to pick if server error occurs", () => {
     cy.intercept("GET", "https://api.helium.io/v1/stats", {
         statusCode: 500,
         body: {
