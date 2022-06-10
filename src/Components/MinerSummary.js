@@ -31,7 +31,7 @@ const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRew
   }else{
     const minerName = match.url.split(" ").join("-").slice(1)
     findMiner(minerName)
-
+    console.log("test")
   }
 }
 

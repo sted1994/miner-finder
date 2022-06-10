@@ -38,7 +38,6 @@ class App extends Component {
       .then(rewards => this.setState({minerRewards: rewards.data.total, errors: false}))
       .catch(error => {
         this.setState({errors: true})
-        console.log(error)
         return error
       })
     }
@@ -49,9 +48,9 @@ class App extends Component {
        apiCalls.getRewards(this.state.minerAddress, "min_time=-30%20day&max_time=-1%20day").then(res => this.setState({minerRewards: res.data.total}))
     }
 
-    renderSearch = (match) => {
+    renderSearch = (match, findMiner) => {
       return !this.state.errors ? <MinerSummary findMiner={this.findMiner} match={match} updateRewards={this.updateRewards} minerRewards={this.state.minerRewards} minerSummary={this.state.minerSummary}/> :
-      <><Error/><MinerSearch searchError={this.state.errors} findMiner={this.findMiner}/></>
+      <><Error/><MinerSearch searchError={this.state.errors} findMiner={findMiner}/></>
     }
 
   render () {
@@ -65,7 +64,7 @@ class App extends Component {
         </section>
         <Switch>
           <Route exact path="/" render={() => <MinerSearch searchError={this.state.errors} findMiner={this.findMiner}/> } />
-          <Route  path="/:id" render={({match}) =>  this.renderSearch(match) }/>
+          <Route  path="/:id" render={({match}) =>  this.renderSearch(match, this.findMiner) }/>
         </Switch>
         </header>
       </div>
