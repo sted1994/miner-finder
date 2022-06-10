@@ -1,7 +1,8 @@
 import React from 'react';
 import '../CSS/MinerSummary.css'
+import MinerSearch from './MinerSearch'
 
-const MinerSummary = ({minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
+const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
 
   if(!Array.isArray(minerSummary)){
     const name = minerSummary.name.split("-").join(" ")
@@ -27,10 +28,10 @@ const MinerSummary = ({minerSummary, minerRewards, match, updateRewards, findMin
         </section>
       </section>
     )
-  } else{
+  }else{
     const minerName = match.url.split(" ").join("-").slice(1)
     findMiner(minerName)
-    console.log(minerName)
+
   }
 }
 
