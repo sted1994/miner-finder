@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import '../CSS/App.css';
 import Banner from './Banner';
-import MarketPrice from './MarketPrice';
 import PriceChart from './PriceChart';
 import Stats from './Stats';
 import MinerSearch from './MinerSearch';
