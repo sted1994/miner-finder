@@ -18,7 +18,7 @@ const setChartPoints = () => {
       <h3 className="price-chart_header">Oracle Price</h3>
       <VictoryLine className="price-chart"
     style={{
-      data: { stroke: "#c43a31", strokeWidth: 10 },
+      data: { stroke: "#c43a31", strokeWidth: 5 },
       parent: { border: "none"},
     }}
     data={setChartPoints()}

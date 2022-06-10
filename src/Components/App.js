@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 import '../CSS/App.css';
 import Banner from './Banner';
-import MarketPrice from './MarketPrice';
 import PriceChart from './PriceChart';
 import Stats from './Stats';
 import MinerSearch from './MinerSearch';
 import MinerSummary from './MinerSummary'
+import Error from './Error'
 import {Route, Switch} from 'react-router-dom'
 import {apiCalls} from '../apiCalls';
 
@@ -20,6 +20,7 @@ class App extends Component {
       minerSummary: [],
       minerAddress: "",
       minerRewards: 0,
+      errors: false,
     }
   }
 
@@ -34,7 +35,11 @@ class App extends Component {
         this.setState({minerSummary: res[0], minerAddress: res[0].address})
         return res[0].address
       }).then(address => apiCalls.getRewards(address, "min_time=-1%20day&max_time=0%20day"))
-      .then(rewards => this.setState({minerRewards: rewards.data.total}))
+      .then(rewards => this.setState({minerRewards: rewards.data.total, errors: false}))
+      .catch(error => {
+        this.setState({errors: true})
+        return error
+      })
     }
 
     updateRewards = (timeFrame) => {
@@ -43,6 +48,10 @@ class App extends Component {
        apiCalls.getRewards(this.state.minerAddress, "min_time=-30%20day&max_time=-1%20day").then(res => this.setState({minerRewards: res.data.total}))
     }
 
+    renderSearch = (match, findMiner) => {
+      return !this.state.errors ? <MinerSummary findMiner={this.findMiner} match={match} updateRewards={this.updateRewards} minerRewards={this.state.minerRewards} minerSummary={this.state.minerSummary}/> :
+      <><Error/><MinerSearch searchError={this.state.errors} findMiner={findMiner}/></>
+    }
 
   render () {
     return (
@@ -50,13 +59,12 @@ class App extends Component {
         <header className="App-header">
         <Banner />
         <section className="information-bar">
-          <MarketPrice price={this.state.marketValue}/>
           <PriceChart prices={this.state.oraclePrices}/>
           <Stats />
         </section>
         <Switch>
-          <Route exact path="/" render={() => <MinerSearch findMiner={this.findMiner}/> } />
-          <Route  path="/:id" render={({match}) => <MinerSummary findMiner={this.findMiner} match={match} updateRewards={this.updateRewards} minerRewards={this.state.minerRewards} minerSummary={this.state.minerSummary}/> } />
+          <Route exact path="/" render={() => <MinerSearch searchError={this.state.errors} findMiner={this.findMiner}/> } />
+          <Route  path="/:id" render={({match}) =>  this.renderSearch(match, this.findMiner) }/>
         </Switch>
         </header>
       </div>
