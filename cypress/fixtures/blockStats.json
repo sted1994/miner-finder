@@ -1,0 +1,61 @@
+{
+    "data": {
+        "token_supply": 120753957.81924781,
+        "election_times": {
+            "last_week": {
+                "stddev": 313.866716631458,
+                "avg": 2155.582142857143
+            },
+            "last_month": {
+                "stddev": 650.203350317658,
+                "avg": 2178.3656351791533
+            },
+            "last_hour": {
+                "stddev": null,
+                "avg": 2084.0
+            },
+            "last_day": {
+                "stddev": 337.968560294812,
+                "avg": 2295.4054054054054
+            }
+        },
+        "counts": {
+            "validators": 3303,
+            "transactions": 458687179,
+            "ouis": 36,
+            "hotspots_online": 615461,
+            "hotspots_dataonly": 1706,
+            "hotspots": 847047,
+            "countries": 176,
+            "consensus_groups": 37333,
+            "coingecko_price_usd": 1251,
+            "coingecko_price_gbp": 897,
+            "coingecko_price_eur": 1054,
+            "cities": 64091,
+            "challenges": 146461572,
+            "blocks": 1387926
+        },
+        "challenge_counts": {
+            "last_day": 206053,
+            "active": 0
+        },
+        "block_times": {
+            "last_week": {
+                "stddev": 23.06718101969869,
+                "avg": 64.2848182011482
+            },
+            "last_month": {
+                "stddev": 61.890868142952556,
+                "avg": 64.43161642649217
+            },
+            "last_hour": {
+                "stddev": 18.550449911503275,
+                "avg": 63.74545454545454
+            },
+            "last_day": {
+                "stddev": 23.033555464603314,
+                "avg": 66.7416860015468
+            }
+        }
+    }
+}
