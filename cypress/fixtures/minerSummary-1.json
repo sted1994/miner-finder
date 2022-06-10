@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "lng": -105.15603618372657,
+            "lat": 39.63546990317599,
+            "timestamp_added": "2021-08-20T23:19:21.000000Z",
+            "status": {
+                "timestamp": "2022-06-09T15:57:23.267000Z",
+                "online": "online",
+                "listen_addrs": [
+                    "/p2p/11mR1MTKdBCpykC6R7AKSrZhKZGYGE1x3D6L7Ve6SDCGLcXe7J6/p2p-circuit/p2p/1122GmddTFY9voHgwL2kDSsMd1hsjMpF9NQwkgrHUTNJKmjSHXj"
+                ],
+                "height": 1389155
+            },
+            "reward_scale": 0.4271087646484375,
+            "payer": "13ENbEQPAvytjLnqavnbSAzurhGoCSNkGECMx7eHHDAfEaDirdY",
+            "owner": "13AZq6ihSDeqsVqtdN4bGotuicHRivszfwnKeyRqwzdZwCRGKmN",
+            "nonce": 6,
+            "name": "tangy-burgundy-swift",
+            "mode": "full",
+            "location_hex": "88268ccb61fffff",
+            "location": "8c268ccb60c8dff",
+            "last_poc_challenge": 1390718,
+            "last_change_block": 1390718,
+            "geocode": {
+                "short_street": "S Eldridge St",
+                "short_state": "CO",
+                "short_country": "US",
+                "short_city": "Morrison",
+                "long_street": "South Eldridge Street",
+                "long_state": "Colorado",
+                "long_country": "United States",
+                "long_city": "Morrison",
+                "city_id": "bW9ycmlzb25jb2xvcmFkb3VuaXRlZCBzdGF0ZXM"
+            },
+            "gain": 50,
+            "elevation": 5,
+            "block_added": 974619,
+            "block": 1390733,
+            "address": "1122GmddTFY9voHgwL2kDSsMd1hsjMpF9NQwkgrHUTNJKmjSHXj"
+        }
+    ]
+}

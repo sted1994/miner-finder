@@ -26,7 +26,10 @@ class App extends Component {
 
   componentDidMount = () => {
     Promise.all([apiCalls.getOraclePrice()])
-    .then(res => this.setState({oraclePrices: res[0]}))
+    .then(res => {
+      console.log("res", res)
+      this.setState({oraclePrices: res[0]})
+    })
   }
 
   findMiner = (input) => {

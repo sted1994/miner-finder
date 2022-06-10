@@ -11,16 +11,15 @@ class Stats extends Component{
       dataPoints: [],
       statsToShow: "Search Stats",
       dataToShow: "",
+      error: false,
     }
   }
 
   componentDidMount = () => {
     Promise.all([apiCalls.getStats()])
     .then(res => {
-      this.setState({stats: res[0].data.counts})
-      this.setState({dataPoints: Object.keys(res[0].data.counts)})
-      this.setState({stats: res[0].data.counts})
-      })
+      this.setState({stats: res[0].data.counts, dataPoints: Object.keys(res[0].data.counts), stats: res[0].data.counts})
+    }).catch(error => this.setState({statsToShow: "Oh No", dataToShow: "an error occured during loading try again"}))
   }
 
 
@@ -34,7 +33,7 @@ class Stats extends Component{
     return(
       <div className="information-container">
         <h3>Stats</h3>
-        <select onChange={(event) => this.onChangeHandler(event)}>
+        <select className="stat-selector" onChange={(event) => this.onChangeHandler(event)}>
           <option value="">-- Select Stats --</option>
           <DropDown dataPoints={this.state.dataPoints}/>
         </select>

@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "lng": -104.9901486907944,
+            "lat": 39.743852873360574,
+            "timestamp_added": "2021-09-10T18:37:50.000000Z",
+            "status": {
+                "timestamp": "2022-05-18T12:08:25.586000Z",
+                "online": "offline",
+                "listen_addrs": [
+                    "/ip4/75.70.141.121/tcp/44158"
+                ],
+                "height": 1360065
+            },
+            "reward_scale": 0.046539306640625,
+            "payer": "13ENbEQPAvytjLnqavnbSAzurhGoCSNkGECMx7eHHDAfEaDirdY",
+            "owner": "14k7hEsRwEkacZEpktD53WdFyomso6anGbV13HEm5tLPHjj2kK6",
+            "nonce": 4,
+            "name": "beautiful-latte-tiger",
+            "mode": "full",
+            "location_hex": "88268cda8dfffff",
+            "location": "8c268cda8c4bbff",
+            "last_poc_challenge": 1390726,
+            "last_change_block": 1390735,
+            "geocode": {
+                "short_street": "16th St Mall",
+                "short_state": "CO",
+                "short_country": "US",
+                "short_city": "Denver",
+                "long_street": "16th Street Mall",
+                "long_state": "Colorado",
+                "long_country": "United States",
+                "long_city": "Denver",
+                "city_id": "ZGVudmVyY29sb3JhZG91bml0ZWQgc3RhdGVz"
+            },
+            "gain": 10,
+            "elevation": 0,
+            "block_added": 1005403,
+            "block": 1390762,
+            "address": "112wEJZrhw6PSB16boXLQV1UjYjWh3FZhYjakC5pRTDHuxLizVqV"
+        }
+    ]
+}
