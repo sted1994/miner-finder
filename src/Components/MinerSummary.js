@@ -8,7 +8,7 @@ const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRew
     const name = minerSummary.name.split("-").join(" ")
     const scaleReward = minerSummary.reward_scale.toFixed(2)
     const findStatus = () =>{
-      return minerSummary.status.online=== "online" ? <article>🟢 Online</article> : <article>🔴 Offline</article>
+      return minerSummary.status.online=== "online" ? <article className="online">🟢 Online</article> : <article className="offline">🔴 Offline</article>
     }
     return(
       <section className="miner-summary">
@@ -20,11 +20,11 @@ const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRew
           <p className="location">{minerSummary.geocode.long_city}, {minerSummary.geocode.short_state}</p>
           <p className="scale-reward">Scale Reward: {scaleReward}</p>
         </section>
-          <p>{minerRewards}</p>
+        <p className="miner-total">{minerRewards}</p>
         <section className="rewards-filter">
-          <button onClick={() => updateRewards(7)}>last 7 days</button>
-          <button onClick={() => updateRewards(14)}>last 14 days</button>
-          <button onClick={() => updateRewards(30)}>last 30 days</button>
+          <button className="week"onClick={() => updateRewards(7)}>last 7 days</button>
+          <button className="biWeekly" onClick={() => updateRewards(14)}>last 14 days</button>
+          <button className="month" onClick={() => updateRewards(30)}>last 30 days</button>
         </section>
       </section>
     )

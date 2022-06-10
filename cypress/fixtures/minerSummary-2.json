@@ -6,7 +6,7 @@
             "timestamp_added": "2021-09-10T18:37:50.000000Z",
             "status": {
                 "timestamp": "2022-05-18T12:08:25.586000Z",
-                "online": "online",
+                "online": "offline",
                 "listen_addrs": [
                     "/ip4/75.70.141.121/tcp/44158"
                 ],
