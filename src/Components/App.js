@@ -66,8 +66,8 @@ class App extends Component {
           <Stats />
         </section>
         <Switch>
-          <Route exact path="/" render={() => <MinerSearch searchError={this.state.errors} findMiner={this.findMiner}/> } />
-          <Route  path="/:id" render={({match}) =>  this.renderSearch(match, this.findMiner) }/>
+          <Route exact path='/' render={() => <MinerSearch searchError={this.state.errors} findMiner={this.findMiner}/> } />
+          <Route  exact path='/:id' render={({match}) =>  this.renderSearch(match, this.findMiner) }/>
         </Switch>
         </header>
       </div>
