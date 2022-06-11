@@ -58,8 +58,8 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+        <header className="app-header">
         <Banner />
         <section className="information-bar">
           <PriceChart prices={this.state.oraclePrices}/>

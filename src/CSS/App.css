@@ -1,11 +1,11 @@
-.App {
+.app {
   background-color: blue;
   background-size: cover;
   height: 100%;
   text-align: center;
 }
 
-.App-logo {
+.app-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -16,7 +16,7 @@
   }
 }
 
-.App-header {
+.app-header {
   background: url('../images/minerFinder-background.png');
   background-size: cover;
   display: flex;
@@ -30,21 +30,18 @@
   overflow-x: hidden;
 }
 
-.App-link {
+.app-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .information-bar{
   display: flex;
   justify-content: space-around;
   width: 78%;
+}
+
+@media screen and (max-width: 1100px) {
+  .information-bar{
+    width: 100%;
+  }
 }
