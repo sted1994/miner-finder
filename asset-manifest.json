@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.4bc081e9.css",
-    "main.js": "/static/js/main.74bb436c.js",
+    "main.js": "/static/js/main.52c6b028.js",
     "static/js/787.66155715.chunk.js": "/static/js/787.66155715.chunk.js",
     "static/media/minerFinder-background.png": "/static/media/minerFinder-background.d51f51cf4fb48dd7ef07.png",
     "index.html": "/index.html",
     "main.4bc081e9.css.map": "/static/css/main.4bc081e9.css.map",
-    "main.74bb436c.js.map": "/static/js/main.74bb436c.js.map",
+    "main.52c6b028.js.map": "/static/js/main.52c6b028.js.map",
     "787.66155715.chunk.js.map": "/static/js/787.66155715.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4bc081e9.css",
-    "static/js/main.74bb436c.js"
+    "static/js/main.52c6b028.js"
   ]
 }
