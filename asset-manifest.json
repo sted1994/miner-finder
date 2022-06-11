@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/miner-finder/static/css/main.72c94008.css",
-    "main.js": "/miner-finder/static/js/main.33c26b2a.js",
+    "main.js": "/miner-finder/static/js/main.fbe1ba12.js",
     "static/js/787.66155715.chunk.js": "/miner-finder/static/js/787.66155715.chunk.js",
     "static/media/minerFinder-background.png": "/miner-finder/static/media/minerFinder-background.d51f51cf4fb48dd7ef07.png",
     "index.html": "/miner-finder/index.html",
     "main.72c94008.css.map": "/miner-finder/static/css/main.72c94008.css.map",
-    "main.33c26b2a.js.map": "/miner-finder/static/js/main.33c26b2a.js.map",
+    "main.fbe1ba12.js.map": "/miner-finder/static/js/main.fbe1ba12.js.map",
     "787.66155715.chunk.js.map": "/miner-finder/static/js/787.66155715.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.72c94008.css",
-    "static/js/main.33c26b2a.js"
+    "static/js/main.fbe1ba12.js"
   ]
 }
