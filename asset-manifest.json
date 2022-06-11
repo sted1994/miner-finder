@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/miner-finder/static/css/main.72c94008.css",
-    "main.js": "/miner-finder/static/js/main.5b739c6a.js",
-    "static/js/787.66155715.chunk.js": "/miner-finder/static/js/787.66155715.chunk.js",
-    "static/media/minerFinder-background.png": "/miner-finder/static/media/minerFinder-background.d51f51cf4fb48dd7ef07.png",
-    "index.html": "/miner-finder/index.html",
-    "main.72c94008.css.map": "/miner-finder/static/css/main.72c94008.css.map",
-    "main.5b739c6a.js.map": "/miner-finder/static/js/main.5b739c6a.js.map",
-    "787.66155715.chunk.js.map": "/miner-finder/static/js/787.66155715.chunk.js.map"
+    "main.css": "/static/css/main.4bc081e9.css",
+    "main.js": "/static/js/main.74bb436c.js",
+    "static/js/787.66155715.chunk.js": "/static/js/787.66155715.chunk.js",
+    "static/media/minerFinder-background.png": "/static/media/minerFinder-background.d51f51cf4fb48dd7ef07.png",
+    "index.html": "/index.html",
+    "main.4bc081e9.css.map": "/static/css/main.4bc081e9.css.map",
+    "main.74bb436c.js.map": "/static/js/main.74bb436c.js.map",
+    "787.66155715.chunk.js.map": "/static/js/787.66155715.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72c94008.css",
-    "static/js/main.5b739c6a.js"
+    "static/css/main.4bc081e9.css",
+    "static/js/main.74bb436c.js"
   ]
 }
