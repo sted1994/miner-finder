@@ -12,7 +12,7 @@ class MinerSearch extends Component {
   };
 
   clearSearch = () => {
-    this.props.findMiner(this.state.search);
+    this.props.findMiner(this.state.search.toLowerCase());
     this.setState({search: ""});
   };
 
