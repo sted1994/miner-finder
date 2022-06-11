@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import '../CSS/Stats.css'
+import React, {Component} from 'react';
+import '../CSS/Stats.css';
 import {apiCalls} from '../apiCalls';
-import DropDown from './DropDown'
+import DropDown from './DropDown';
 
 class Stats extends Component{
   constructor(){
@@ -12,21 +12,19 @@ class Stats extends Component{
       statsToShow: "Search Stats",
       dataToShow: "",
       error: false,
-    }
-  }
+    };
+  };
 
   componentDidMount = () => {
     Promise.all([apiCalls.getStats()])
-    .then(res => {
-      this.setState({stats: res[0].data.counts, dataPoints: Object.keys(res[0].data.counts), stats: res[0].data.counts})
-    }).catch(error => this.setState({statsToShow: "Oh No", dataToShow: "an error occured during loading try again"}))
-  }
+    .then(res => this.setState({stats: res[0].data.counts, dataPoints: Object.keys(res[0].data.counts), stats: res[0].data.counts}))
+    .catch(error => this.setState({statsToShow: "Oh No", dataToShow: "an error occured during loading try again"}))
+  };
 
 
 
   onChangeHandler = (event) => {
-    this.setState({statsToShow: event.target.value})
-    this.setState({dataToShow: this.state.stats[event.target.value]})
+    this.setState({statsToShow: event.target.value, dataToShow: this.state.stats[event.target.value]})
   }
 
   render(){

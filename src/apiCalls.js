@@ -18,7 +18,7 @@ const apiCalls = {
       fetch('https://api.helium.io/v1/oracle/prices')
       .then(res => res.json())
       .then(data => data.data)
-      .catch(error => console.log(error))
+      .catch(error => error)
     )
   },
 
@@ -40,15 +40,15 @@ const apiCalls = {
     return fetch(`https://api.helium.io/v1/hotspots/${address}/rewards/sum?${timeFrame}`)
             .then(res => res.json())
             .then(data => data)
-      },
+  },
 
   getMinerDetails(input){
-    let address = false
+    let address = false;
     input.split("").forEach(char => {
       if(parseInt(char)){
         address = true
-      }
-    })
+      };
+    });
 
     if(address === false){
       return fetch(`https://api.helium.io/v1/hotspots/name/${input.split(" ").join("-")}`)
@@ -60,9 +60,9 @@ const apiCalls = {
         .then(res => res.json())
         .then(data => data.data)
         .catch(error => error)
-    }
+    };
   },
 
-}
+};
 
-export {apiCalls}
+export {apiCalls};

@@ -3,9 +3,9 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  height: 60vh;
   margin-top: 4rem;
   width: 60vw;
-  height: 60vh;
 }
 
 .secondary-info{
@@ -15,13 +15,13 @@
 }
 
 .scale-reward{
-  margin-top: 0;
   margin-right: 20px;
+  margin-top: 0;
 }
 
 .location{
-  margin-top: 0;
   margin-left: 20px;
+  margin-top: 0;
 }
 
 .miner-name{
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 1100px) {
   .miner-summary{
-    width: 90%;
     height: 40vh;
+    width: 90%;
   }
 }
