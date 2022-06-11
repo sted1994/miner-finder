@@ -6,10 +6,11 @@
   place-content: top;
   width: 100%;
 }
+
 .logo{
   border-radius: 100%;
-  width: 12vw;
   box-shadow:  0px 0px 20px 11px #ccc;
+  width: 12vw;
 }
 
 .logo:hover{

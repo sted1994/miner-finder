@@ -1,24 +1,20 @@
-import React, {Component} from 'react'
-import '../CSS/MinerSearch.css'
-import {apiCalls} from '../apiCalls'
-import {NavLink} from 'react-router-dom'
+import React, {Component} from 'react';
+import '../CSS/MinerSearch.css';
+import {apiCalls} from '../apiCalls';
+import {NavLink} from 'react-router-dom';
 
 class MinerSearch extends Component {
   constructor(searchError, findMiner){
-    super()
+    super();
     this.state = {
-      search:""
-    }
-  }
+      search: "",
+    };
+  };
 
   clearSearch = () => {
-    this.props.findMiner(this.state.search)
-    this.setState({search: ""})
-  }
-
-  checkSearch = () => {
-
-  }
+    this.props.findMiner(this.state.search.toLowerCase());
+    this.setState({search: ""});
+  };
 
   render(){
     return(
@@ -28,8 +24,8 @@ class MinerSearch extends Component {
         <NavLink to={this.state.search}><button className="miner-search-btn" onClick={() => this.clearSearch()}>Find Miners</button></NavLink>
         <p>{this.props.searchError}</p>
       </section>
-    )
-  }
-}
+    );
+  };
+};
 
 export default MinerSearch;

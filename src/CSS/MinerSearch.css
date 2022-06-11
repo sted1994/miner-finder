@@ -4,9 +4,9 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  height: 40vh;
   margin-top: 4rem;
   width: 60vw;
-  height: 40vh;
 }
 
 .search-input{
@@ -36,8 +36,8 @@
 
 @media screen and (max-width: 1100px) {
   .search-container{
-    width: 80%;
     height: 30vh;
+    width: 80%;
   }
 
   .search-input{

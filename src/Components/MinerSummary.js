@@ -1,15 +1,14 @@
 import React from 'react';
-import '../CSS/MinerSummary.css'
-import MinerSearch from './MinerSearch'
+import '../CSS/MinerSummary.css';
+import MinerSearch from './MinerSearch';
 
 const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
-
   if(!Array.isArray(minerSummary)){
-    const name = minerSummary.name.split("-").join(" ")
-    const scaleReward = minerSummary.reward_scale.toFixed(2)
+    const name = minerSummary.name.split("-").join(" ");
+    const scaleReward = minerSummary.reward_scale.toFixed(2);
     const findStatus = () =>{
       return minerSummary.status.online=== "online" ? <article className="online">🟢 Online</article> : <article className="offline">🔴 Offline</article>
-    }
+    };
     return(
       <section className="miner-summary">
         <section className="status">
@@ -27,12 +26,11 @@ const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRew
           <button className="month" onClick={() => updateRewards(30)}>last 30 days</button>
         </section>
       </section>
-    )
+    );
   }else{
-    const minerName = match.url.split(" ").join("-").slice(1)
-    findMiner(minerName)
-    console.log("test")
-  }
-}
+    const minerName = match.url.split(" ").join("-").slice(1);
+    findMiner(minerName);
+  };
+};
 
 export default MinerSummary;
