@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../CSS/MinerSummary.css';
 import MinerSearch from './MinerSearch';
 
-const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
+const MinerSummary = ({minerSummary, minerRewards, match, updateRewards, findMiner}) =>{
   if(!Array.isArray(minerSummary)){
     const name = minerSummary.name.split("-").join(" ");
     const scaleReward = minerSummary.reward_scale.toFixed(2);
@@ -28,9 +29,22 @@ const MinerSummary = ({searchError, minerSummary, minerRewards, match, updateRew
       </section>
     );
   }else{
-    const minerName = match.url.split(" ").join("-").slice(1);
+    const minerName = match.url.toLowerCase().split(" ").join("-").slice(1);
+    console.log(minerName)
     findMiner(minerName);
   };
 };
 
 export default MinerSummary;
+
+MinerSummary.propTypes = {
+
+  minerSummart: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  minerRewards: PropTypes.number,
+  match: PropTypes.object,
+  updateRewards: PropTypes.func,
+  findMiner: PropTypes.func,
+}

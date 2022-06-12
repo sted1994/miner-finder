@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DropDown = ({dataPoints}) => {
   const options = dataPoints.map(dataPoint => <option key={dataPoint} value={dataPoint} >{dataPoint}</option>);
@@ -10,3 +11,6 @@ const DropDown = ({dataPoints}) => {
 };
 
 export default DropDown;
+DropDown.propTypes = {
+  dataPoints: PropTypes.array
+};
