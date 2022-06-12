@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import '../CSS/MinerSearch.css';
 import {apiCalls} from '../apiCalls';
 import {NavLink} from 'react-router-dom';
@@ -29,3 +30,8 @@ class MinerSearch extends Component {
 };
 
 export default MinerSearch;
+
+MinerSearch.propTypes = {
+  searchError: PropTypes.bool,
+  findMiner: PropTypes.func,
+}

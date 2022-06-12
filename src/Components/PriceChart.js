@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../CSS/PriceChart.css';
 import { VictoryLine } from "victory";
 
@@ -41,3 +42,7 @@ const PriceChart = ({prices}) => {
 };
 
 export default PriceChart;
+
+PriceChart.propTypes = {
+  prices: PropTypes.array
+}

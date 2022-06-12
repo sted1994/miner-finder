@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../CSS/MarketPrice.css';
 
 const MarketPrice = ({price}) => {
@@ -11,3 +12,7 @@ const MarketPrice = ({price}) => {
 };
 
 export default MarketPrice;
+
+Dropdown.propTypes = {
+  price: PropTypes.string
+};
