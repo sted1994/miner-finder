@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Miner Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![minerFinder-logo](https://user-images.githubusercontent.com/26700819/173252859-6084d85c-2f1c-4727-8785-14c34e14bede.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+### Solo Project
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Miner Finder was created to give access to useful information about the Helium Blckchain aswell as provide users with the ability to check Miner details, status, and rewards. Miner Finder gives users the ability to monitor Helium's oracle price on a live and responsive 1 day chart. Browsing through the stats container users will find a wide range of stats like total hotspots and Number of Cities mining. If a user is curious about the status or rewards of their miner or a friends miner they can quickly search for thenm with our miner search tool. After entering a valid miner name users are redirected to a miner summary page. Here usres will be able to find the location, operating status, reward scale, as well as their rewards over different periods. Please enjoy. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### [Miner Finder deployable link](https://sted1994.github.io/miner-finder/)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Views
 
-### `npm run build`
+### Landing page:
+<hr/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Stats:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![miner-finder-stats](https://user-images.githubusercontent.com/26700819/173250680-7c18c450-2159-4b4d-a04d-22e884b34188.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Search:
 
-### `npm run eject`
+![minerFinder-search](https://user-images.githubusercontent.com/26700819/173251205-1997a84b-788d-4a9e-ac52-9ad10377eb87.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Miner Summary:
+<hr/>
+#### Miner Rewards:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![minerFinder-rewards](https://user-images.githubusercontent.com/26700819/173251428-f978daca-7c43-49f7-bd08-06fdb70a1e12.gif)
+<hr/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technology Summary
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### React
+<hr />
 
-## Learn More
+- This multi page App was built with React and incorporates React PropTypes as well as React Router.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Cypress Testing
+<hr />
 
-### Code Splitting
+- All Testing of User views and user interactions
+- Error Handling of Server errors and invalid URLS Tested
+- Fetch requests are stubbed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![minerFinder-testing](https://user-images.githubusercontent.com/26700819/173251714-2b4b3147-f5d6-40e9-952b-9d6c8866a4d9.gif)
+<hr />
 
-### Analyzing the Bundle Size
+## Local Set-Up Instructions
+<hr />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- From the repo click the code button and copy the SSH link.
+- Open terminal by pressing command + space bar, and search for terminal
+- Inside of your terminal type `$git clone git@github.com:sted1994/miner-finder.git` 
+- In your terminal type `$cd miner-finder`
+- Type `$npm install`
+- Do not run `$npm audit fix --force`
+- Then type `$npm start` This runs the app in the development mode.
+- The browser should then deploy using a local host
+- Enjoy using Miner Finder!
 
-### Making a Progressive Web App
+- NOTE: Make sure that you type `Control + C` in your terminal when you are done using the application. This ensure the server will stop running before your close your Terminal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Instructions for Use
+<hr />
 
-### Advanced Configuration
+- On opening the browser, a user is free to browse stats about the Helium block chain or view the oracle Price chart!
+- If you have a miner simply type it into the search bar. 
+    ##### Here are a few if you dont have a miner name:
+     - Tangy Burgundy Swift
+     - Beautiful Latte Tiger
+     - Cuddly Gingham Pheasant
+- When a miner summary appears the current rewards displayed are for a 24hr period.
+- To view rewards over different periods click the time frame buttons below.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
+<hr />
 
-### Deployment
+- React
+- React Router
+- Cypress Testing
+- GET requests
+- ES6 JavaScript
+- CSS
+- JSX
+- Fetch Web API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Future Features
+<hr />
 
-### `npm run build` fails to minify
+- Display Helium Market Price
+- Allow users to search miners by location
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Management
+<hr />
+
+- I used a [Github Project Board](https://github.com/sted1994/miner-finder/projects/1) stay on task and meet the deadlines.
+- I also used [Github Issues] to break user stories down into easier to solve increments.
+
+### MVP Proposal
+<hr />
+- [MVP Proposal](https://docs.google.com/document/d/15VEPICTyNWhiKLtiLRzOHWZv_Oc14Ne6ANJpTphLHOM/edit)
+
+### User Personas
+<hr />
+- [Brian](https://docs.google.com/document/d/1gOv5nw6CknzcvB6mZ6erAB0lcymVal7NQNURxkCbmQU/edit)
+- [Beth](https://docs.google.com/document/d/1h0qzkCQ4NejnlemjVRn_8eQoIdSP2RBpCZd5JlUVTSg/edit)
+
+### Figma WireFrame
+<hr />
+- [Miner Finder Wire Frame](https://www.figma.com/file/eBhfaYaXqGVHiVDcGdH9uK/Untitled)
+
+## Contributors
+<hr />
+
+- [Tyler Tedesco](https://github.com/sted1994)
+
+## Image Credit
+<hr />
+
+- Miner Finder logo created by [Freelogodesign.org](https://www.freelogodesign.org/)
